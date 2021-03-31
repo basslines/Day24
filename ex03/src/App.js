@@ -10,7 +10,7 @@ class App extends Component {
     return (
       <div className="App">
         <button type="button" onClick={this.setLocalStorage}>
-          Set Local Stoage
+          Set Local Storage
         </button>
       </div>
     );
