@@ -1,10 +1,10 @@
-import React, { Component } from "react";
+import React from "react";
 
 class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <button onClick={this.setMyStorage}>Set my Storage</button>
+        <button onClick={() => this.setMyStorage()}>Set my Storage</button>
       </div>
     );
   }
