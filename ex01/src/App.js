@@ -1,13 +1,7 @@
 import React, { Component } from "react";
+import "./App.css";
 
 class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <button onClick={() => this.setMyStorage()}>Set my Storage</button>
-      </div>
-    );
-  }
   setMyStorage = () => {
     document.cookie = "Year=2021";
     console.log(document.cookie);
@@ -16,5 +10,14 @@ class App extends Component {
     sessionStorage.setItem("frontend", "React");
     console.log(sessionStorage);
   };
+  render() {
+    return (
+      <div className="App">
+        <button type="button" onClick={this.setMyStorage}>
+          Set Cookie
+        </button>
+      </div>
+    );
+  }
 }
 export default App;

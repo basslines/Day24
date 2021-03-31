@@ -1,14 +1,7 @@
 import React, { Component } from "react";
+import "./App.css";
 
 class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <button onClick={() => this.setMyStorage()}>Set my Storage</button>
-        <button onClick={() => this.getMyStorage()}>Get my Storage</button>
-      </div>
-    );
-  }
   setMyStorage = () => {
     document.cookie = "Year=2021";
     localStorage.setItem("Paragon", "yes, but Arena first");
@@ -22,6 +15,14 @@ class App extends Component {
     const mySessionStorageData = sessionStorage.getItem("frontend");
     console.log(mySessionStorageData);
   };
+  render() {
+    return (
+      <div className="App">
+        <button onClick={() => this.setMyStorage()}>Set Storage</button>
+        <button onClick={() => this.getMyStorage()}>Get Storage</button>
+      </div>
+    );
+  }
 }
 
 export default App;
