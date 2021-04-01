@@ -8,18 +8,23 @@ class App extends Component {
     sessionStorage.setItem("frontend", "React");
   };
   getMyStorage = () => {
-    const myCookieData = document.cookie;
-    // console.log(myCookieData);
+    const myCookieData = document.cookie.split("=")[1];
+    console.log(myCookieData);
     const myLocalStorageData = localStorage.getItem("Paragon");
-    // console.log(myLocalStorageData);
+    console.log(myLocalStorageData);
     const mySessionStorageData = sessionStorage.getItem("frontend");
-    // console.log(mySessionStorageData);
+    console.log(mySessionStorageData);
+    return [myCookieData, myLocalStorageData, mySessionStorageData];
   };
   render() {
     return (
       <div className="App">
-        <button onClick={() => this.setMyStorage()}>Set Storage</button>
-        <button onClick={() => this.getMyStorage()}>Get Storage</button>
+        <button type="button" onClick={this.setMyStorage}>
+          Set Storage
+        </button>
+        <button type="button" onClick={this.getMyStorage}>
+          Get Storage
+        </button>
       </div>
     );
   }
