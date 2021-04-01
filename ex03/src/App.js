@@ -4,7 +4,7 @@ import "./App.css";
 class App extends Component {
   setLocalStorage = () => {
     localStorage.setItem("Arena", "Selection Month");
-    console.log(localStorage);
+    // console.log(localStorage);
   };
   render() {
     return (

@@ -4,11 +4,11 @@ import "./App.css";
 class App extends Component {
   setLocalStorage = () => {
     localStorage.setItem("Arena", "Selection Month");
-    console.log(localStorage);
+    // console.log(localStorage);
   };
   getLocalStorage = () => {
     let myLocalStorageData = localStorage.getItem("Arena");
-    console.log(myLocalStorageData);
+    // console.log(myLocalStorageData);
   };
   render() {
     return (

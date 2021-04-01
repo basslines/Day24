@@ -4,11 +4,11 @@ import "./App.css";
 class App extends Component {
   setMyStorage = () => {
     document.cookie = "Year=2021";
-    console.log(document.cookie);
+    // console.log(document.cookie);
     localStorage.setItem("Paragon", "yes, but Arena first");
-    console.log(localStorage);
+    // console.log(localStorage);
     sessionStorage.setItem("frontend", "React");
-    console.log(sessionStorage);
+    // console.log(sessionStorage);
   };
   render() {
     return (
